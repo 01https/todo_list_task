@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+{% load crispy_forms_filters %}
+
+{% block title %} Sample page {% endblock %}
+
+{% block stylesheets %} {% endblock stylesheets %}
+
+{% block content %}
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>{{ object|yesno:"Update,Create" }} Task</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post" novalidate>
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                          <br>
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

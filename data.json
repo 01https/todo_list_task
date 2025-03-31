@@ -1,0 +1,125 @@
+[
+  {
+    "model": "manager.Tag",
+    "pk": 1,
+    "fields": {
+      "name": "Sport"
+    }
+  },
+  {
+    "model": "manager.Tag",
+    "pk": 2,
+    "fields": {
+      "name": "Work"
+    }
+  },
+  {
+    "model": "manager.Tag",
+    "pk": 3,
+    "fields": {
+      "name": "Home"
+    }
+  },
+  {
+    "model": "manager.Tag",
+    "pk": 4,
+    "fields": {
+      "name": "Relax"
+    }
+  },
+  {
+    "model": "manager.Tag",
+    "pk": 5,
+    "fields": {
+      "name": "Any"
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 1,
+    "fields": {
+      "content": "Morning workout session",
+      "datetime": "2023-11-20T07:30:00Z",
+      "deadline": "2023-11-21",
+      "is_done": false,
+      "tags": [1]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 2,
+    "fields": {
+      "content": "Complete project documentation",
+      "datetime": "2023-11-20T09:00:00Z",
+      "deadline": "2023-11-22",
+      "is_done": false,
+      "tags": [2]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 3,
+    "fields": {
+      "content": "Organize living room",
+      "datetime": "2023-11-20T12:00:00Z",
+      "deadline": "2023-11-25",
+      "is_done": true,
+      "tags": [3]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 4,
+    "fields": {
+      "content": "Meditation and yoga",
+      "datetime": "2023-11-20T18:00:00Z",
+      "deadline": "2023-11-21",
+      "is_done": false,
+      "tags": [1, 4]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 5,
+    "fields": {
+      "content": "Team brainstorming session",
+      "datetime": "2023-11-21T10:00:00Z",
+      "deadline": "2023-11-21",
+      "is_done": false,
+      "tags": [2, 5]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 6,
+    "fields": {
+      "content": "Grocery shopping",
+      "datetime": "2023-11-21T17:00:00Z",
+      "deadline": "2023-11-22",
+      "is_done": false,
+      "tags": [3, 5]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 7,
+    "fields": {
+      "content": "Watch new movie",
+      "datetime": "2023-11-21T20:00:00Z",
+      "deadline": "2023-11-25",
+      "is_done": false,
+      "tags": [4]
+    }
+  },
+  {
+    "model": "manager.Task",
+    "pk": 8,
+    "fields": {
+      "content": "Plan weekend activities",
+      "datetime": "2023-11-22T08:00:00Z",
+      "deadline": "2023-11-24",
+      "is_done": false,
+      "tags": [5]
+    }
+  }
+]

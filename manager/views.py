@@ -3,7 +3,6 @@ from asyncio import TaskGroup
 from django.urls import reverse_lazy
 from django.views import generic
 from django.shortcuts import get_object_or_404, redirect
-from django.views.decorators.http import require_POST
 
 from manager.models import Task, Tag
 from manager.forms import TaskForm
@@ -63,8 +62,15 @@ class TagDelete(generic.DeleteView):
     success_url = reverse_lazy("manager:tags")
 
 
-def toggle_task_status(request, pk):
-    task = get_object_or_404(Task, pk=pk)
-    task.is_done = not task.is_done
-    task.save()
-    return redirect("manager:home")
+class ToggleTaskStatusView(generic.UpdateView):
+    model = Task
+    fields = []
+
+    def form_valid(self, form):
+        task = form.instance
+        task.is_done = not task.is_done
+        task.save()
+        return redirect("manager:home")
+
+    def get_success_url(self):
+        return reverse_lazy("manager:home")

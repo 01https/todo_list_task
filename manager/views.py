@@ -2,7 +2,7 @@ from asyncio import TaskGroup
 
 from django.urls import reverse_lazy
 from django.views import generic
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import redirect
 
 from manager.models import Task, Tag
 from manager.forms import TaskForm
